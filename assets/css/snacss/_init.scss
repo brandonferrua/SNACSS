@@ -1,0 +1,36 @@
+
+// Imports 
+
+	@import "settings";
+	@import "depot/reset/snacss-reset";
+	@import "depot/helpers/snacss-helpers";
+	@import "depot/utilities/snacss-utilities";
+	@import "depot/forms/snacss-forms";
+	@import "depot/typography/snacss-typography";
+	@import "depot/layout/snacss-layout";
+
+// Init 
+
+@mixin init (
+
+	$snacss-reset 		: $trigger_snacss-reset,
+	$snacss-helpers 	: $trigger_snacss-helpers,
+	$snacss-utilities 	: $trigger_snacss-utilities,
+	$snacss-forms 		: $trigger_snacss-forms,
+	$snacss-typography 	: $trigger_snacss-typography,
+	$snacss-layout 		: $trigger_snacss-layout
+
+) {
+
+	@if ($snacss-reset) 	 { @include snacss-reset; }
+	@if ($snacss-helpers) 	 { @include snacss-helpers; }
+	@if ($snacss-utilities)  { @include snacss-utilities; }
+	@if ($snacss-forms) 	 { @include snacss-forms; }
+	@if ($snacss-typography) { @include snacss-typography; }
+	@if ($snacss-layout) 	 { @include snacss-layout; }
+
+}
+
+// Make me available!
+
+@include init;
