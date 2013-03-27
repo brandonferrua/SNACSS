@@ -1,0 +1,66 @@
+// ************************************************************************************************************************
+// * Base Master Variables                                                                                                *
+// * Project Documentation: http://wwww.styleguide/link/goes/here                                                         *
+// ************************************************************************************************************************
+
+// --------------------------------------------------------------------------------------------------------------------- //
+//                                              TIER 1: CORE VARIABLES                                                     
+// --------------------------------------------------------------------------------------------------------------------- //
+
+// --------------------------------------------------------- //
+// 1.) Config    
+//     
+//     These variables are core to the package. Changing a 
+//     single variable within this section will most likely
+//     have a domino effect based on the relationships they
+//     are tied to.     
+//                                         
+// --------------------------------------------------------- //
+
+    // a.) Image Paths
+    // -------------------------------------------------------------- //
+
+    $imageURL-core                  : "../../Blocks/images" !default;
+    $imageURL-local                 : "../images" !default;
+
+    // b.) Icon Colors
+    //
+    // Variable points to cobalt level icon sets
+    //      Can accept  :
+    //          black
+    //          darkgrey
+    //          grey
+    //          lightergrey
+    //          lightgrey
+    //          white
+    // -------------------------------------------------------------- //
+
+    $icon-color                     : "darkgrey" !default;
+
+    // c.) Body Hue Adjustments
+    //
+    // Variable will change lighten or darker functions based on value
+    //      Can accept  :
+    //          Hex     : #404040
+    //          RGBA    : rgba(25,25,25,.6)
+    //          RGB     : rgb(25,25,25)
+    // -------------------------------------------------------------- //
+
+    $body-color                     : "#141414" !default;
+
+    // c.) Project Color Palette 
+
+    $primaryColor                   : #141414 !default;                 // Color Palette Base -- Usually the darker accent - Body Background
+    $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary -- Usually the lighter accent - Content Background
+    $tertiaryColor                  : #EA903C !default;                 // Accent color -- Usually a color spot, used on links and buttons
+
+    $black                          : #000000 !default;
+    $darkgrey                       : lighten($black, 25%) !default;
+    $grey                           : lighten($black, 50%) !default;
+    $lightgrey                      : lighten($black, 75%) !default;
+    $lightergrey                    : lighten($black, 90%) !default;
+    $white                          : #ffffff !default;
+
+// --------------------------------------------------------------------------------------------------------------------- //
+//                                              TIER 2: ADVANCED VARIABLES                                                     
+// --------------------------------------------------------------------------------------------------------------------- //    
