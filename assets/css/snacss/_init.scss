@@ -7,6 +7,7 @@
 	@import "depot/forms/snacss-forms";
 	@import "depot/typography/snacss-typography";
 	@import "depot/layout/snacss-layout";
+	@import "depot/blocks/snacss-blocks";
 
 // Init 
 
@@ -16,7 +17,8 @@
 	$snacss-vendor 		: $trigger_snacss-vendor,
 	$snacss-forms 		: $trigger_snacss-forms,
 	$snacss-typography 	: $trigger_snacss-typography,
-	$snacss-layout 		: $trigger_snacss-layout
+	$snacss-layout 		: $trigger_snacss-layout,
+	$snacss-blocks 		: $trigger_snacss-blocks
 
 ) {
 
@@ -25,6 +27,7 @@
 	@if ($snacss-forms) 	 { @include snacss-forms; }
 	@if ($snacss-typography) { @include snacss-typography; }
 	@if ($snacss-layout) 	 { @include snacss-layout; }
+	@if ($snacss-blocks) 	 { @include snacss-blocks; }
 
 }
 

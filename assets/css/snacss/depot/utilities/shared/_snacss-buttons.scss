@@ -1,55 +1,77 @@
 
 // Buttons
 
-	.u-button {
-		@include inline-block;
-		@include borderRadius(4px);
-		padding: emCalc(10px) emCalc(20px);
-		color: $font-tertiaryColor;
-		text-shadow: 0 1px 0 rgba(0,0,0,.3);
-		@include transition(all, .25s, ease);
-		&.u-button-primary {
-			@include background($color: $tertiaryColor, $gradient: linear-gradient(top, $tertiaryColor, darken($tertiaryColor, 5%)));
-			@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
-			border: 1px solid darken($tertiaryColor, 10%);
-			border-bottom-color: darken($tertiaryColor,20%);
-			&:hover,
-			&:active {
-				@include background($color: darken($tertiaryColor, 5%), $gradient: linear-gradient(top, darken($tertiaryColor, 5%), darken($tertiaryColor, 10%)));
-			}
-			&:active {
-				@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
-				background: $tertiaryColor;
-				border-bottom-color: lighten($tertiaryColor,10%);
-			}
-		}
-		&.u-button-secondary {
-			@include background($color: $secondaryColor, $gradient: linear-gradient(top, $secondaryColor, darken($secondaryColor, 5%)));
-			@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
-			border: 1px solid darken($secondaryColor, 10%);
-			border-bottom-color: darken($secondaryColor,20%);
-			color: $font-secondaryColor;
-			&:hover,
-			&:active {
-				@include background($color: darken($secondaryColor, 5%), $gradient: linear-gradient(top, darken($secondaryColor, 5%), darken($secondaryColor, 10%)));
-			}
-			&:active {
-				@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
-				background: $secondaryColor;
-				border-bottom-color: lighten($secondaryColor,10%);
-			}
-		}
-		&.u-button-success {
+%u-button_base {
+	@include inline-block;
+	@include borderRadius(4px);
+	padding: emCalc(10px) emCalc(20px);
+	color: $font-tertiaryColor;
+	text-shadow: 0 1px 0 rgba(0,0,0,.3);
+	font-family: sans-serif;
+	@include transition(all, .25s, ease);
+}
 
-		}
-		&.u-button-warning {
-
-		}
-		&.u-button-danger {
-
-		}
-		&.u-button-link {
-			@include elementGoBOOM;
-			&:hover { text-decoration: underline; }
-		}
+%u-button_primary {
+	@extend %u-button_base;
+	@include background($color: $tertiaryColor, $gradient: linear-gradient(top, $tertiaryColor, darken($tertiaryColor, 5%)));
+	@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+	border: 1px solid darken($tertiaryColor, 10%);
+	border-bottom-color: darken($tertiaryColor,20%);
+	&:hover,
+	&:active {
+		@include background($color: darken($tertiaryColor, 5%), $gradient: linear-gradient(top, darken($tertiaryColor, 5%), darken($tertiaryColor, 10%)));
 	}
+	&:active {
+		@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
+		background: $tertiaryColor;
+		border-bottom-color: lighten($tertiaryColor,10%);
+	}
+	&.s_disabled {
+		@include hueAdjust(background, $tertiaryColor, 15%);
+		@include hueAdjust(color, $font-tertiaryColor, 30%);
+		opacity: .7;
+	}
+}
+%u-button_secondary {
+	@extend %u-button_base;
+	@include background($color: $secondaryColor, $gradient: linear-gradient(top, $secondaryColor, darken($secondaryColor, 5%)));
+	@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+	border: 1px solid darken($secondaryColor, 10%);
+	border-bottom-color: darken($secondaryColor,20%);
+	color: $font-secondaryColor;
+	&:hover,
+	&:active {
+		@include background($color: darken($secondaryColor, 5%), $gradient: linear-gradient(top, darken($secondaryColor, 5%), darken($secondaryColor, 10%)));
+	}
+	&:active {
+		@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
+		background: $secondaryColor;
+		border-bottom-color: lighten($secondaryColor,10%);
+	}
+	&.s_disabled {
+		@include hueAdjust(background, $secondaryColor, 15%);
+		@include hueAdjust(color, $font-secondaryColor, 30%);
+		opacity: .7;
+	}
+}
+%u-button_success {
+	@extend %u-button_base;
+}
+%u-button_warning {
+	@extend %u-button_base;
+}
+%u-button_danger {
+	@extend %u-button_base;
+}
+%u-button_link {
+	@include elementGoBOOM;
+	&:hover { text-decoration: underline; }
+}
+
+.u-button { @extend %u-button_base; }
+.u-button-primary { @extend %u-button_primary; }
+.u-button-secondary { @extend %u-button_secondary; }
+.u-button-success { @extend %u-button_success; }
+.u-button-warning { @extend %u-button_warning; }
+.u-button-danger { @extend %u-button_danger; }
+.u-button-link { @extend %u-button_link; }

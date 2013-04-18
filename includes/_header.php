@@ -21,6 +21,7 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <div class="site">
+            <div class="wrapper">
             <!-- Add your site or application content here -->
             <header role="banner">
                 <h1 class="logo">

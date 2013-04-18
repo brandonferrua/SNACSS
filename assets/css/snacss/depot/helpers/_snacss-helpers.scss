@@ -641,7 +641,7 @@ $legacy-support-for-ie: $legacy-support-for-ie6 or $legacy-support-for-ie7 or $l
         content: "";
         display: inline-block;
         height: 0;
-        vertical-align: baseline;
+        vertical-align: middle;
         width: 0;
 
         @if ($direction == "up") {
