@@ -46,13 +46,18 @@
     //          RGB     : rgb(25,25,25)
     // -------------------------------------------------------------- //
 
-    $body-color                     : "#141414" !default;
+    $body-color                     : "light" !default;
 
     // c.) Project Color Palette 
 
     $primaryColor                   : #141414 !default;                 // Color Palette Base -- Usually the darker accent - Body Background
     $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary -- Usually the lighter accent - Content Background
-    $tertiaryColor                  : #EA903C !default;                 // Accent color -- Usually a color spot, used on links and buttons
+    $tertiaryColor                  : #00b4ff !default;                 // Accent color -- Usually a color spot, used on links and buttons
+
+    $font-color                     : #222222 !default;
+    $font-primaryColor              : #eeeeee !default;                 // Contrasting Color to $primaryColor
+    $font-secondaryColor            : #333333 !default;                 // Contrasting Color to $secondaryColor
+    $font-tertiaryColor             : #ffffff !default;                 // Contrasting Color to $tertiaryColor
 
     $black                          : #000000 !default;
     $darkgrey                       : lighten($black, 25%) !default;
@@ -61,6 +66,22 @@
     $lightergrey                    : lighten($black, 90%) !default;
     $white                          : #ffffff !default;
 
+    // Grid Makeup
+
+    $width                          : 100% !default;
+    $cols                           : 12 !default;
+    $col-gutter                     : 2.05% !default;
+
 // --------------------------------------------------------------------------------------------------------------------- //
 //                                              TIER 2: ADVANCED VARIABLES                                                     
 // --------------------------------------------------------------------------------------------------------------------- //    
+
+    $font-size                      : 14px;
+    $heading-fontSize               : 24px;
+    $line-height                    : 22px; 
+    $leading                        : 22px;
+
+    $font-family                    : 'Merriweather', serif; 
+
+    $content-bgColor                : #fff;
+

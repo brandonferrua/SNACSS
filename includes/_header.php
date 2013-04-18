@@ -20,8 +20,11 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <header>
-            <?php include("_nav.php"); ?>
-        </header>
+        <div class="site">
+            <!-- Add your site or application content here -->
+            <header role="banner">
+                <h1 class="logo">
+                    <a href="/SNACSS/">SNACSS</a>
+                </h1>
+                <?php include("_nav.php"); ?>
+            </header>

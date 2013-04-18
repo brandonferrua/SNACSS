@@ -1,4 +1,104 @@
 
 @mixin snacss-typography {
-	
+	@include setup-baseline($font-size);
+	*:first-child { margin-top: 0; }
+	p {
+		margin-bottom: $leading;
+		&:only-of-child { margin-bottom: 0; }
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: bold;
+		line-height: $line-height;
+	}
+
+	// Serif 
+	body {
+    	font-family: $font-family;
+	    font-style: normal;
+	    font-weight: 400;
+	    line-height: 25.875px;
+	}
+
+	blockquote {
+	    font-style: italic;
+	    font-weight: 400;
+	    font-size: 1.625em;
+	    line-height: 1.4230769230769231em;
+	    margin-bottom: 0.7692307692307693em;
+	}
+
+	h1 {
+	    font-size: 4.25em;
+	    line-height: 1.1029411764705883em;
+	    margin-bottom: 20px;
+	}
+
+	h2 {
+	    font-size: 2.625em;
+	    line-height: 1.1904761904761905em;
+	    margin-bottom: 0.47619047619047616em;
+	}
+
+	h3 {
+	    font-size: 1.625em;
+	    line-height: 1.9230769230769231em;
+	    margin-bottom: 0.7692307692307693em;
+	}
+
+	h4 {
+	    margin-bottom: 1.5625em;
+	    font-weight: 600;
+	    font-style: normal;
+	    font-size: 1em;
+	    line-height: 1.6171875em;
+	}
+
+	h5 {
+	    margin-bottom: 1.5625em;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-size: 1em;
+	    line-height: 1.6171875em;
+	}
+
+	h6 {
+	    font-weight: 400;
+	    font-style: italic;
+	    margin-bottom: 1.25em;
+	    font-size: 1em;
+	    line-height: 1.6171875em;
+	}
+
+	p {
+	    margin-bottom: 1.25em;
+	    font-size: 1em;
+	    line-height: 1.6171875em;
+	}
+
+	p.intro {
+	    font-size: 1.125em;
+	    margin-bottom: 20px;
+	    line-height: 1.4375em;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-weight: 300;
+	}
+
+	table {
+		max-width: 100%;
+		th,
+		td {
+			padding: emCalc(4px);
+			text-align: left;
+		}
+	}
 }
+

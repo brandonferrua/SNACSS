@@ -1,0 +1,61 @@
+// ★★ Grid -> Grid A (grid-a) ★★
+//
+// ✎ WIDTH: 1000px | #COLS: 12 | COL WIDTH: 63px | COL PADDING: 12px | GUTTER: 20px
+//
+// ⌚ v1.0 (02/07/12)
+//
+// ☯ Browser Support:
+//     - Chrome
+//     - FireFox
+//     - Safari
+//     - IE9/8/7
+//
+
+// Grid Calculator
+
+$col_width: ($width - ($col-gutter * ($cols - 1))) / $cols;
+$col_total_width: $col-width + $col-gutter;
+
+@mixin col($n: 1, $first-child : false) { 
+	float: left; 
+	@include span($n);  
+	@if $first-child == true {
+		margin-left: 0;
+	}
+}
+
+@mixin span($n: 1) {
+    width: ($n * $col-width) + (($n - 1) * $col-gutter);
+
+    .ie7 & { width: ($n * $col-width) + (($n - 1) * $col-gutter) - 1%; }
+
+    @if $n == $cols {
+        margin-left: 0;
+    } @else {
+        margin-left: $col-gutter;
+    }
+}
+
+@function col-span($n: 1) {
+    $width : ($n * $col-width) + (($n - 1) * $col-gutter);
+    @return $width;
+}
+
+[class*='col-'] {
+    float: left;
+    margin-left: $col-gutter;
+    &:first-of-type { margin-left: 0; }
+}
+
+[class*='col-1'] { @include col(1); }
+[class*='col-2'] { @include col(2); }
+[class*='col-3'] { @include col(3); }
+[class*='col-4'] { @include col(4); }
+[class*='col-5'] { @include col(5); }
+[class*='col-6'] { @include col(6); }
+[class*='col-7'] { @include col(7); }
+[class*='col-8'] { @include col(8); }
+[class*='col-9'] { @include col(9); }
+[class*='col-10'] { @include col(10); }
+[class*='col-11'] { @include col(11); }
+[class*='col-12'] { @include col(12); }

@@ -1,0 +1,31 @@
+
+// Logo
+
+.logo {
+	padding: 0 emCalc(15px);
+	font-size: $font-size;
+	a {
+		@include ir;
+		@include inline-block;
+		@include borderRadius(50px);
+		background: url("#{$imageURL-local}/logo.jpg");
+		background-size: 80px 80px;
+		width: 80px;
+		height: 80px;
+	}
+}
+
+section[role="main"] {
+	background-color: $content-bgColor;
+}
+
+// Grid
+
+[class*='col-'] {
+	line-height: $leading*2;
+	background-color: darken($content-bgColor,15%);
+	padding: 0 emCalc(20px);
+	margin-bottom: emCalc($leading);
+	text-align: center;
+	&:hover { background-color: darken($content-bgColor,20%); }
+}

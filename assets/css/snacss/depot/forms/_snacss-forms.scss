@@ -1,4 +1,33 @@
 
 @mixin snacss-forms {
-	
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"] {
+		@include borderRadius(3px);
+		border: 1px solid;
+		@include hueAdjust(border-color, $content-bgColor, 15%);
+		@include hueAdjust(border-top-color, $content-bgColor, 25%);
+		@include hueAdjust(border-left-color, $content-bgColor, 25%);
+		padding: emCalc(4px) emCalc(10px);
+		line-height: 20px;
+		height: 30px;
+		font-size: emCalc(14px);
+		margin-bottom: $leading;
+	}
+	textarea {
+		min-height: emCalc(100px);
+	}
 }

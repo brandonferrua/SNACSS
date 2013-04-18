@@ -1,11 +1,10 @@
-
-// Settings
+// ************************************************************************************************************************
+// * SNACSS Settings                                                                                                 	  *
+// * Turn features sets on and off								                                                          *
+// ************************************************************************************************************************
 	
-// Features
-
 	$trigger_snacss-reset 		: true !default;
-	$trigger_snacss-helpers 	: true !default;
-	$trigger_snacss-utilities 	: true !default;
+	$trigger_snacss-vendor	 	: true !default;
 	$trigger_snacss-forms 		: true !default;
 	$trigger_snacss-typography  : true !default;
 	$trigger_snacss-layout 		: true !default;

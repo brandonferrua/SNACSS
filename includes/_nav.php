@@ -1,16 +1,16 @@
-<nav>
+<nav role="navigation">
     <ul>
         <li>
-            <a href="#">Nav Item</a>
+            <a href="#">Documentation</a>
         </li>
         <li>
-            <a href="#">Nav Item</a>
+            <a href="#">Style Guide</a>
         </li>
         <li>
-            <a href="#">Nav Item</a>
+            <a href="#">About this project</a>
         </li>
         <li>
-            <a href="#">Nav Item</a>
+            <a href="#">Fork me!</a>
         </li>
     </ul>   
 </nav>

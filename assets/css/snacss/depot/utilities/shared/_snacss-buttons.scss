@@ -1,0 +1,55 @@
+
+// Buttons
+
+	.u-button {
+		@include inline-block;
+		@include borderRadius(4px);
+		padding: emCalc(10px) emCalc(20px);
+		color: $font-tertiaryColor;
+		text-shadow: 0 1px 0 rgba(0,0,0,.3);
+		@include transition(all, .25s, ease);
+		&.u-button-primary {
+			@include background($color: $tertiaryColor, $gradient: linear-gradient(top, $tertiaryColor, darken($tertiaryColor, 5%)));
+			@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+			border: 1px solid darken($tertiaryColor, 10%);
+			border-bottom-color: darken($tertiaryColor,20%);
+			&:hover,
+			&:active {
+				@include background($color: darken($tertiaryColor, 5%), $gradient: linear-gradient(top, darken($tertiaryColor, 5%), darken($tertiaryColor, 10%)));
+			}
+			&:active {
+				@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
+				background: $tertiaryColor;
+				border-bottom-color: lighten($tertiaryColor,10%);
+			}
+		}
+		&.u-button-secondary {
+			@include background($color: $secondaryColor, $gradient: linear-gradient(top, $secondaryColor, darken($secondaryColor, 5%)));
+			@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+			border: 1px solid darken($secondaryColor, 10%);
+			border-bottom-color: darken($secondaryColor,20%);
+			color: $font-secondaryColor;
+			&:hover,
+			&:active {
+				@include background($color: darken($secondaryColor, 5%), $gradient: linear-gradient(top, darken($secondaryColor, 5%), darken($secondaryColor, 10%)));
+			}
+			&:active {
+				@include boxShadow(inset 0 2px 4px rgba(0,0,0,.2));
+				background: $secondaryColor;
+				border-bottom-color: lighten($secondaryColor,10%);
+			}
+		}
+		&.u-button-success {
+
+		}
+		&.u-button-warning {
+
+		}
+		&.u-button-danger {
+
+		}
+		&.u-button-link {
+			@include elementGoBOOM;
+			&:hover { text-decoration: underline; }
+		}
+	}
