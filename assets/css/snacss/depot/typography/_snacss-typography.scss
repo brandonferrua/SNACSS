@@ -2,6 +2,10 @@
 @mixin snacss-typography {
 	@include setup-baseline($font-size);
 	*:first-child { margin-top: 0; }
+	p:last-of-type,
+	ul:last-of-type,
+	dl:last-of-type,
+	dd:last-of-type { margin-bottom:0; }
 	p {
 		margin-bottom: $leading;
 		&:only-of-child { margin-bottom: 0; }
@@ -100,5 +104,7 @@
 			text-align: left;
 		}
 	}
+
+	img { max-width: 100%; height: auto; }
 }
 

@@ -21,11 +21,32 @@ section[role="main"] {
 
 // Grid
 
-[class*='col-'] {
+.u-code [class*='col-'] {
 	line-height: $leading*2;
 	background-color: darken($content-bgColor,15%);
 	padding: 0 emCalc(20px);
 	margin-bottom: emCalc($leading);
 	text-align: center;
 	&:hover { background-color: darken($content-bgColor,20%); }
+}
+
+.styleguide { 
+	@include group; 
+	dl { margin: 0; padding: 0; }
+	dd { margin: 0; padding: 0; }
+	.col-12 { margin-bottom: emCalc($leading); }
+}
+.sg { 
+	background-color: transparent; &:hover { background-color: transparent; } }
+.sg-colors .sg {
+	padding-top: 100px;
+	text-align: center;
+	color: $lightgrey;
+	&.sg-colors_bg { background-color: $primaryColor; color: $font-primaryColor;}
+	&.sg-colors_fg { background-color: $secondaryColor; color: $font-secondaryColor;}
+	&.sg-colors_type { background-color: $font-color; color: $font-colorAlt;}
+	&.sg-colors_link { background-color: $tertiaryColor; color: $font-tertiaryColor;}
+}
+.sg-buttons {
+	button { margin-bottom: emCalc($leading); }
 }

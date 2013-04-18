@@ -18,7 +18,7 @@ nav[role="navigation"] {
 	li {
 		a {
 			display: block;
-			padding: emCalc(5px) emCalc(20px);
+			padding: emCalc(5px) emCalc(20px) emCalc(5px) 0;
 			color: $tertiaryColor;
 			text-decoration: none;
 			@include transition(all, .25s, ease);
@@ -27,6 +27,32 @@ nav[role="navigation"] {
 			}
 		}
 		+ li a { margin-top: emCalc($leading/2); }
+		ul {
+			padding-left: emCalc(15px);
+			position: relative;
+			a { color: $font-color; &:hover { color: $tertiaryColor; } }
+			&:before {
+				content: '';
+				width: 1px;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				@include hueAdjust(background-color, $content-bgColor, 10%);
+			}
+			li {
+				position: relative;
+				&:before {
+					content: '';
+					height: 1px;
+					width: 10px;
+					position: absolute;
+					left: emCalc(-15px);
+					top: 50%;
+					@include hueAdjust(background-color, $content-bgColor, 10%);					
+				}
+			}
+		}
 	}
 }
 section[role="main"] {

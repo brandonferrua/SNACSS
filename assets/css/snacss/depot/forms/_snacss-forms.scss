@@ -21,13 +21,40 @@
 		@include hueAdjust(border-color, $content-bgColor, 15%);
 		@include hueAdjust(border-top-color, $content-bgColor, 25%);
 		@include hueAdjust(border-left-color, $content-bgColor, 25%);
+		@include hueAdjust(background-color, $content-bgColor, 1%);
 		padding: emCalc(4px) emCalc(10px);
 		line-height: 20px;
 		height: 30px;
 		font-size: emCalc(14px);
 		margin-bottom: $leading;
+		outline: none;
+		&:hover {
+			@include hueAdjust(border-color, $content-bgColor, 25%);
+		}
+		&:active,
+		&:focus {
+			@include hueAdjust(border-color, $tertiaryColor, 10%);
+		}
 	}
 	textarea {
 		min-height: emCalc(100px);
 	}
+
+	label {
+		//> span { display: block; }
+	}
+
+	// Layout
+	.u-form-elements {
+		@include group;
+		margin-bottom: emCalc($leading);
+		// States
+		&.s_horizontal {
+			> span { display: block; }
+			> * { @include inline-block; margin: 0; }
+			.u-button { height: auto; line-height: 28px; padding: 0 emCalc(10px); }
+		}
+	}
+
+
 }
