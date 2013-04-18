@@ -896,18 +896,18 @@ img {
     display: block;
     list-style: none; }
 
-.site {
+.wrapper {
   width: 80%;
   max-width: 84em;
   min-width: 22.85714em;
   margin: 0 auto;
   position: relative; }
-  .site:before, .site:after {
+  .wrapper:before, .wrapper:after {
     content: "";
     display: table; }
-  .site:after {
+  .wrapper:after {
     clear: both; }
-  .ie8 .site {
+  .ie8 .wrapper {
     zoom: 1; }
 
 header[role="banner"] {
@@ -1097,35 +1097,33 @@ section[role="main"] {
   .styleguide .sg-buttons button,
   .styleguide .u-dropdown {
     margin-bottom: 1.57143em; }
-
-.sg {
-  background-color: transparent; }
-  .sg:hover {
+  .styleguide .sg {
     background-color: transparent; }
-
-.sg-colors .sg {
-  padding-top: 100px;
-  text-align: center;
-  color: #bfbfbf;
-  font-size: 11px;
-  font-family: sans-serif;
-  border: 1px solid; }
-  .sg-colors .sg.sg-colors_bg {
-    background-color: #141414;
-    color: #eeeeee;
-    border-color: black; }
-  .sg-colors .sg.sg-colors_fg {
-    background-color: #f9f9f9;
-    color: #333333;
-    border-color: #e0e0e0; }
-  .sg-colors .sg.sg-colors_type {
-    background-color: #222222;
-    color: #eeeeee;
-    border-color: #090909; }
-  .sg-colors .sg.sg-colors_link {
-    background-color: #00b4ff;
-    color: white;
-    border-color: #0090cc; }
+    .styleguide .sg:hover {
+      background-color: transparent; }
+  .styleguide .sg-colors .sg {
+    padding-top: 100px;
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 11px;
+    font-family: sans-serif;
+    border: 1px solid; }
+    .styleguide .sg-colors .sg.sg-colors_bg {
+      background-color: #141414;
+      color: #eeeeee;
+      border-color: black; }
+    .styleguide .sg-colors .sg.sg-colors_fg {
+      background-color: #f9f9f9;
+      color: #333333;
+      border-color: #e0e0e0; }
+    .styleguide .sg-colors .sg.sg-colors_type {
+      background-color: #222222;
+      color: #eeeeee;
+      border-color: #090909; }
+    .styleguide .sg-colors .sg.sg-colors_link {
+      background-color: #00b4ff;
+      color: white;
+      border-color: #0090cc; }
 
 h2 > span {
   font-size: 13px;

@@ -1,62 +1,72 @@
+// SNACSS Site layout File
+// Utilizing the SNACSS framework but overrides for layout purposes
+// --------------------------------------------------------------------- //
 
-.site {
-	@include group;
-	width: 80%;
-	max-width: emCalc(1176px);
-	min-width: emCalc(320px);
-	margin: 0 auto;
-	position: relative;
-}
-header[role="banner"] {
-	@include col(3,true);
-	padding: emCalc($leading) 0 0;
-}
-nav[role="navigation"] {
-	position: fixed;
-	z-index: 2;
-	ul { padding: 0; margin: 0; }
-	li {
-		a {
-			display: block;
-			padding: emCalc(5px) emCalc(20px) emCalc(5px) 0;
-			color: $tertiaryColor;
-			text-decoration: none;
-			@include transition(all, .25s, ease);
-			&:hover {
-				color: $black;
+// Site Wrapper
+	.wrapper {
+		@include group;
+		width: 80%;
+		max-width: emCalc(1176px);
+		min-width: emCalc(320px);
+		margin: 0 auto;
+		position: relative;
+	}
+
+// Mast Header 
+	header[role="banner"] {
+		@include col(3,true);
+		padding: emCalc($leading) 0 0;
+	}
+
+// Mast Navigation
+	nav[role="navigation"] {
+		position: fixed;
+		z-index: 2;
+		ul { padding: 0; margin: 0; }
+		li {
+			a {
+				display: block;
+				padding: emCalc(5px) emCalc(20px) emCalc(5px) 0;
+				color: $tertiaryColor;
+				text-decoration: none;
+				@include transition(all, .25s, ease);
+				&:hover {
+					color: $black;
+				}
 			}
-		}
-		+ li a { margin-top: emCalc($leading/2); }
-		ul {
-			padding-left: emCalc(15px);
-			position: relative;
-			a { color: $font-color; &:hover { color: $tertiaryColor; } }
-			&:before {
-				content: '';
-				width: 1px;
-				height: 100%;
-				position: absolute;
-				left: 0;
-				top: 0;
-				@include hueAdjust(background-color, $content-bgColor, 10%);
-			}
-			li {
+			+ li a { margin-top: emCalc($leading/2); }
+			ul {
+				padding-left: emCalc(15px);
 				position: relative;
+				a { color: $font-color; &:hover { color: $tertiaryColor; } }
 				&:before {
 					content: '';
-					height: 1px;
-					width: 10px;
+					width: 1px;
+					height: 100%;
 					position: absolute;
-					left: emCalc(-15px);
-					top: 50%;
-					@include hueAdjust(background-color, $content-bgColor, 10%);					
+					left: 0;
+					top: 0;
+					@include hueAdjust(background-color, $content-bgColor, 10%);
+				}
+				li {
+					position: relative;
+					&:before {
+						content: '';
+						height: 1px;
+						width: 10px;
+						position: absolute;
+						left: emCalc(-15px);
+						top: 50%;
+						@include hueAdjust(background-color, $content-bgColor, 10%);					
+					}
 				}
 			}
 		}
 	}
-}
-section[role="main"] {
-	@include col(9);
-	padding: emCalc($leading) 0 0;
-}
+	
+// Template Content Area
+	section[role="main"] {
+		@include col(9);
+		padding: emCalc($leading) 0 0;
+	}
 
