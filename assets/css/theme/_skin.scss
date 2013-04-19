@@ -55,6 +55,12 @@ body {
 		float: right;
 		padding: emCalc(5px) emCalc(20px);
 		@include background($color: #4183c4, $gradient: linear-gradient(top, #4183c4, darken(#4183c4,10%)));
+		text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+		border-color: darken(#4183c4,15%);
+		&:hover {
+			@include background($color: darken(#4183c4,10%), $gradient: linear-gradient(top, darken(#4183c4,10%), darken(#4183c4,20%)));
+		}
+		
 	}
 
 // Template Content Area

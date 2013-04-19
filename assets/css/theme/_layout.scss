@@ -8,11 +8,12 @@
 	}
 
 // Site Wrapper
+	.site { margin-left: $col-margin; margin-right: $col-margin; }
 	.wrapper {
 		@include group;
-		width: 80%;
+		//width: 80%;
 		max-width: emCalc(1176px);
-		min-width: emCalc(320px);
+		min-width: emCalc(620px);
 		margin: 0 auto;
 		position: relative;
 	}
@@ -23,6 +24,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		min-width: emCalc(620px);
 		float: none;
 		padding: emCalc(10px);
 		margin: 0;
