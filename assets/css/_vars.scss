@@ -8,7 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------- //
 
 // --------------------------------------------------------- //
-// 1.) Config    
+// Config    
 //     
 //     These variables are core to the package. Changing a 
 //     single variable within this section will most likely
@@ -17,13 +17,13 @@
 //                                         
 // --------------------------------------------------------- //
 
-    // a.) Image Paths
+    // Image Paths
     // -------------------------------------------------------------- //
 
     $imageURL-core                  : "../../Blocks/images" !default;
     $imageURL-local                 : "../images" !default;
 
-    // b.) Icon Colors
+    // Icon Colors
     //
     // Variable points to cobalt level icon sets
     //      Can accept  :
@@ -37,7 +37,7 @@
 
     $icon-color                     : "darkgrey" !default;
 
-    // c.) Body Hue Adjustments
+    // Body Hue Adjustments
     //
     // Variable will change lighten or darker functions based on value
     //      Can accept  :
@@ -48,7 +48,7 @@
 
     $body-color                     : "light" !default;
 
-    // c.) Project Color Palette 
+    // Project Color Palette 
 
     $primaryColor                   : #141414 !default;                 // Color Palette Base - Body Background
     $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary  - Content Background
@@ -67,18 +67,10 @@
     $lightergrey                    : lighten($black, 90%) !default;
     $white                          : #ffffff !default;
 
-    // Grid Makeup
-
-    $width-px                       : 1176px !default;
-    $width                          : 100% !default;
-    $cols                           : 12 !default;
-    $col-gutter                     : 2.05% !default;
-    $col-gutter-px                  : 30px !default;
-    $col-margin                     : 15px !default;
+    // Grid 
 
     $page-width                     : 1176px !default;
     $columns                        : 12 !default;
-    //$col-width                      : 68px !default;
     $col-margin                     : 15px !default;
     $gutter-width                   : 30px !default;
     $page-topMargin                 : 22px !default;
