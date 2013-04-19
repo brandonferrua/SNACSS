@@ -771,3 +771,11 @@ $legacy-support-for-ie: $legacy-support-for-ie6 or $legacy-support-for-ie7 or $l
         height: 150%;
     }
 }
+
+%icon_helper {
+    margin: 0 emCalc(5px);
+}
+[class^="icon-"],
+[class*=" icon-"] {
+    @extend %icon_helper;
+}

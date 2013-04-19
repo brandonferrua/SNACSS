@@ -24,6 +24,8 @@
             <h1 class="logo">
                 <a href="<?php echo $imageURL_local; ?>">SNACSS</a>
             </h1>
+            <a href="https://github.com/brandonferrua/SNACSS/fork" class="u-button u-button-success fork-me"><i class="icon-github"></i>Fork this project</a>
+            <span class="updated-on"><i class="icon-certificate"></i>Last updated on: <strong>April 19th, 2013, 12:19 PST</strong></span>
         </header>
         <div class="site">
             <div class="wrapper">

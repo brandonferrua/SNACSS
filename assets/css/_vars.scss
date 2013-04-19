@@ -50,8 +50,8 @@
 
     // c.) Project Color Palette 
 
-    $primaryColor                   : #141414 !default;                 // Color Palette Base -- Usually the darker accent - Body Background
-    $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary -- Usually the lighter accent - Content Background
+    $primaryColor                   : #141414 !default;                 // Color Palette Base - Body Background
+    $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary  - Content Background
     $tertiaryColor                  : #00b4ff !default;                 // Accent color -- Usually a color spot, used on links and buttons
 
     $font-color                     : #222222 !default;
@@ -85,5 +85,5 @@
 
     $font-family                    : 'Merriweather', serif; 
 
-    $content-bgColor                : #fff;
+    $content-bgColor                : $secondaryColor;
 

@@ -75,6 +75,7 @@
 		> span {
 			@extend %u-button_secondary;
 			line-height: normal;
+			@include truncate;
 			@include triangle($direction: "down", $location: ":after", $size: 6px, $color: $font-secondaryColor, $spacing: 8px);
 			&:hover,
 			&:active {
@@ -82,7 +83,6 @@
 			}
 		}
 		> ul {
-			//@include boxShadow(0 0 10px rgba(0,0,0,.3));
 			@include borderRadius-bottom(4px);
 			background-color: darken($secondaryColor, 5%);
 			padding: 0;
