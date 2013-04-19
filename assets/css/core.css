@@ -231,99 +231,80 @@
   .u-button-link:hover {
     text-decoration: underline; }
 
-[class*='col-'] {
-  float: left;
-  margin-left: 2.05%; }
-  [class*='col-']:first-of-type {
-    margin-left: 0; }
+[class*='col-']:first-of-type {
+  margin-left: 0; }
 
 [class*='col-1'] {
   float: left;
-  width: 6.45417%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-1'] {
-    width: 5.45417%; }
+  width: 70.5px;
+  max-width: 5.9949%;
+  margin-left: 2.55102%; }
 
 [class*='col-2'] {
   float: left;
-  width: 14.95833%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-2'] {
-    width: 13.95833%; }
+  width: 171px;
+  max-width: 14.54082%;
+  margin-left: 2.55102%; }
 
 [class*='col-3'] {
   float: left;
-  width: 23.4625%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-3'] {
-    width: 22.4625%; }
+  width: 271.5px;
+  max-width: 23.08673%;
+  margin-left: 2.55102%; }
 
 [class*='col-4'] {
   float: left;
-  width: 31.96667%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-4'] {
-    width: 30.96667%; }
+  width: 372px;
+  max-width: 31.63265%;
+  margin-left: 2.55102%; }
 
 [class*='col-5'] {
   float: left;
-  width: 40.47083%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-5'] {
-    width: 39.47083%; }
+  width: 472.5px;
+  max-width: 40.17857%;
+  margin-left: 2.55102%; }
 
 [class*='col-6'] {
   float: left;
-  width: 48.975%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-6'] {
-    width: 47.975%; }
+  width: 573px;
+  max-width: 48.72449%;
+  margin-left: 2.55102%; }
 
 [class*='col-7'] {
   float: left;
-  width: 57.47917%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-7'] {
-    width: 56.47917%; }
+  width: 673.5px;
+  max-width: 57.27041%;
+  margin-left: 2.55102%; }
 
 [class*='col-8'] {
   float: left;
-  width: 65.98333%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-8'] {
-    width: 64.98333%; }
+  width: 774px;
+  max-width: 65.81633%;
+  margin-left: 2.55102%; }
 
 [class*='col-9'] {
   float: left;
-  width: 74.4875%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-9'] {
-    width: 73.4875%; }
+  width: 874.5px;
+  max-width: 74.36224%;
+  margin-left: 2.55102%; }
 
 [class*='col-10'] {
   float: left;
-  width: 82.99167%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-10'] {
-    width: 81.99167%; }
+  width: 975px;
+  max-width: 82.90816%;
+  margin-left: 2.55102%; }
 
 [class*='col-11'] {
   float: left;
-  width: 91.49583%;
-  margin-left: 2.05%; }
-  .ie7 [class*='col-11'] {
-    width: 90.49583%; }
+  width: 1075.5px;
+  max-width: 91.45408%;
+  margin-left: 2.55102%; }
 
 [class*='col-12'] {
   float: left;
-  width: 100%;
+  width: 1176px;
+  max-width: 100.0%;
   margin-left: 0; }
-  .ie7 [class*='col-12'] {
-    width: 99%; }
-
-.wrapper {
-  padding-left: 15px;
-  padding-right: 15px; }
 
 .template-a .wrapper {
   width: 71.42857em;
@@ -332,23 +313,20 @@
   position: relative; }
   .template-a .wrapper section[role="main"] {
     float: left;
-    width: 100%;
+    width: 1176px;
+    max-width: 100.0%;
     margin-left: 0;
     padding: 0; }
-    .ie7 .template-a .wrapper section[role="main"] {
-      width: 99%; }
 .template-a .primary-content {
   float: left;
-  width: 65.98333%;
-  margin-left: 2.05%; }
-  .ie7 .template-a .primary-content {
-    width: 64.98333%; }
+  width: 774px;
+  max-width: 65.81633%;
+  margin-left: 2.55102%; }
 .template-a .secondary-content {
   float: left;
-  width: 31.96667%;
-  margin-left: 2.05%; }
-  .ie7 .template-a .secondary-content {
-    width: 30.96667%; }
+  width: 372px;
+  max-width: 31.63265%;
+  margin-left: 2.55102%; }
 
 * {
   -moz-box-sizing: border-box;
@@ -938,8 +916,21 @@ table {
     text-align: left; }
 
 img {
+  width: auto;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+  img:after {
+    content: '';
+    display: table-cell;
+    clear: both; }
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative; }
 
 .b-list-b {
   position: relative;
@@ -1006,12 +997,11 @@ header[role="banner"] {
 
 nav[role="navigation"] {
   float: left;
-  width: 23.4625%;
-  margin-left: 2.05%;
+  width: 271.5px;
+  max-width: 23.08673%;
+  margin-left: 2.55102%;
   margin-left: 0;
   z-index: 2; }
-  .ie7 nav[role="navigation"] {
-    width: 22.4625%; }
   nav[role="navigation"] ul {
     padding: 0;
     margin: 0; }
@@ -1074,10 +1064,9 @@ nav[role="navigation"] {
 
 section[role="main"] {
   float: left;
-  width: 74.4875%;
-  margin-left: 2.05%; }
-  .ie7 section[role="main"] {
-    width: 73.4875%; }
+  width: 874.5px;
+  max-width: 74.36224%;
+  margin-left: 2.55102%; }
 
 .demo .wrapper {
   padding-top: 3.57143em;

@@ -1,7 +1,14 @@
 
+// Grid
 @import "snacss-grid";
 
 // Templates
 @import "templates/template-a";
 
-@mixin snacss-layout {}
+@mixin snacss-layout {
+	.wrapper { 
+		padding-left: $col-margin; 
+		padding-right: $col-margin; 
+		position: relative;
+	}
+}

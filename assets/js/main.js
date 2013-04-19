@@ -12,5 +12,8 @@ $(document).ready(function() {
     gridonload = 'off';
     makehugrid();
     setgridonload();
+
+    //$('img').baseline(22);
+
 });
 

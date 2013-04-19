@@ -69,10 +69,19 @@
 
     // Grid Makeup
 
+    $width-px                       : 1176px !default;
     $width                          : 100% !default;
     $cols                           : 12 !default;
     $col-gutter                     : 2.05% !default;
+    $col-gutter-px                  : 30px !default;
     $col-margin                     : 15px !default;
+
+    $page-width                     : 1176px !default;
+    $columns                        : 12 !default;
+    //$col-width                      : 68px !default;
+    $col-margin                     : 15px !default;
+    $gutter-width                   : 30px !default;
+    $page-topMargin                 : 22px !default;
 
 // --------------------------------------------------------------------------------------------------------------------- //
 //                                              TIER 2: ADVANCED VARIABLES                                                     
