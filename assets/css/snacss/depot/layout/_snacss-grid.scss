@@ -18,7 +18,6 @@ $col_width: ($width - ($col-gutter * ($cols - 1))) / $cols;
 @mixin col($n: 1, $first-child : false) { 
 	float: left; 
 	@include span($n);  
-    &:first-of-type { margin-left: 0; }
     @if $first-child == true {
         margin-left: 0;
     }

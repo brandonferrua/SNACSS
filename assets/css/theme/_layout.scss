@@ -37,7 +37,7 @@
 
 // Mast Navigation
 	nav[role="navigation"] {
-		@include col(3);
+		@include col(3,$first-child:true);
 		z-index: 2;
 		ul { padding: 0; margin: 0; }
 		li {
@@ -51,7 +51,7 @@
 					color: $black;
 				}
 			}
-			+ li a { margin-top: emCalc($leading/2); }
+			//+ li a { margin-top: emCalc($leading/2); }
 			ul {
 				padding-left: emCalc(15px);
 				position: relative;
@@ -81,6 +81,22 @@
 			&.cc {
 				margin-top: emCalc($leading*2);
 				a { padding: 0; margin: 0; display: inline; }
+			}
+			&.nav-sub {
+				> a,
+				> span {
+					background-color: $secondaryColor;
+					&:before {
+						content: '';
+						height: 1px;
+						width: 100%;
+						@include hueAdjust(background-color, $content-bgColor, 10%);
+						position: absolute;
+						bottom: 0;
+						margin-top: -1px;
+						left: 0;
+					}
+				}
 			}
 		}
 	}
