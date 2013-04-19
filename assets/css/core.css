@@ -922,10 +922,6 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle; }
-  img:after {
-    content: '';
-    display: table-cell;
-    clear: both; }
 
 .wrapper {
   padding-left: 15px;
