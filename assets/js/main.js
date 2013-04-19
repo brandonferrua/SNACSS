@@ -3,12 +3,12 @@
 $(document).ready(function() {
     pageUnits = 'px';
     colUnits = 'px';
-    pagewidth = 960;
+    pagewidth = 1176;
     columns = 12;
-    columnwidth = 140;
-    gutterwidth = 24;
-    pagetopmargin = 0;
-    rowheight = 20;
+    columnwidth = 68;
+    gutterwidth = 30;
+    pagetopmargin = 22;
+    rowheight = 22;
     gridonload = 'off';
     makehugrid();
     setgridonload();

@@ -14,14 +14,14 @@
 // Grid Calculator
 
 $col_width: ($width - ($col-gutter * ($cols - 1))) / $cols;
-$col_total_width: $col-width + $col-gutter;
 
 @mixin col($n: 1, $first-child : false) { 
 	float: left; 
 	@include span($n);  
-	@if $first-child == true {
-		margin-left: 0;
-	}
+    &:first-of-type { margin-left: 0; }
+    @if $first-child == true {
+        margin-left: 0;
+    }
 }
 
 @mixin span($n: 1) {
@@ -59,3 +59,5 @@ $col_total_width: $col-width + $col-gutter;
 [class*='col-10'] { @include col(10); }
 [class*='col-11'] { @include col(11); }
 [class*='col-12'] { @include col(12); }
+
+.wrapper { padding-left: $col-margin; padding-right: $col-margin; }

@@ -70,3 +70,44 @@
 		padding: emCalc($leading) 0 0;
 	}
 
+// Demo Pages
+	.demo {
+		header[role="banner"] {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			float: none;
+			padding: emCalc(10px);
+			margin: 0;
+			background-color: rgba(255,255,255,.5);
+			border-bottom: 1px solid darken($content-bgColor,10%);
+			z-index: 10;
+		}
+		.logo {
+			padding: 0;
+			margin: 0;		
+		}
+		.wrapper {
+			padding-top: emCalc(50px);
+			padding-bottom: emCalc(50px);
+			background-color: darken($content-bgColor,25%);
+			text-align: center;
+		}
+		section[role="main"] {
+			float: none;
+			background-color: transparent;
+			> div {  
+				@include borderRadius(5px);
+				background-color: darken($content-bgColor,15%);
+				text-align: center;
+				&:hover { background-color: darken($content-bgColor,20%); }
+				.demo-helper { line-height: emCalc(500px); }
+			}
+		}
+		.demo-helper {
+			display: block;
+			text-align: center;
+			line-height: emCalc($leading);
+		}
+	}

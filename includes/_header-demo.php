@@ -16,16 +16,13 @@
         <link rel="stylesheet" href="<?php echo $imageURL_local; ?>/assets/css/core.css">
         <script src="<?php echo $imageURL_local; ?>/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="template-a demo">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <header role="banner">
+                <a href="<?php echo $imageURL_local; ?>" class="jump-home">Take me back</a>
+        </header>
         <div class="site">
             <div class="wrapper">
-            <!-- Add your site or application content here -->
-            <header role="banner">
-                <h1 class="logo">
-                    <a href="<?php echo $imageURL_local; ?>">SNACSS</a>
-                </h1>
-                <?php include("_nav.php"); ?>
-            </header>
+            
