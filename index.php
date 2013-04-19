@@ -12,6 +12,7 @@
         <?php include("includes/elements/_typography.html"); ?>
         <h2>Grid</h2>
         <?php include("includes/elements/_grid.html"); ?>
+        
     </section>
 
 <?php include("includes/_footer.php"); ?>
