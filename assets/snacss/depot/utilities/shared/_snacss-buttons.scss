@@ -90,6 +90,25 @@
 
 	%u-button_success {
 		@extend %u-button_base;
+		@include background($color: #66b003, $gradient: linear-gradient(top, #66b003, darken(#66b003, 5%)));
+		@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+		border-color: darken(#66b003, 10%);
+		border-bottom-color: darken(#66b003,20%);
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+		&:hover,
+		&:active {
+			@include background($color: darken(#66b003, 5%), $gradient: linear-gradient(top, darken(#66b003, 5%), darken(#66b003, 10%)));
+		}
+		&:active {
+			background: #66b003;
+			border-bottom-color: lighten(#66b003,10%);
+		}
+		&.s_disabled {
+			background: darken(#66b003, 15%);
+			color: darken($font-secondaryColor, 30%);
+			border-color: darken(#66b003,30%);
+		}
 	}
 
 // Button Base
@@ -97,6 +116,25 @@
 
 	%u-button_warning {
 		@extend %u-button_base;
+		@include background($color: #f7c91f, $gradient: linear-gradient(top, #f7c91f, darken(#f7c91f, 5%)));
+		@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+		border-color: darken(#f7c91f, 10%);
+		border-bottom-color: darken(#f7c91f,20%);
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+		&:hover,
+		&:active {
+			@include background($color: darken(#f7c91f, 5%), $gradient: linear-gradient(top, darken(#f7c91f, 5%), darken(#f7c91f, 10%)));
+		}
+		&:active {
+			background: #f7c91f;
+			border-bottom-color: lighten(#f7c91f,10%);
+		}
+		&.s_disabled {
+			background: darken(#f7c91f, 15%);
+			color: darken($font-secondaryColor, 30%);
+			border-color: darken(#f7c91f,30%);
+		}
 	}
 
 // Button Base
@@ -104,13 +142,32 @@
 
 	%u-button_danger {
 		@extend %u-button_base;
+		@include background($color: #b41800, $gradient: linear-gradient(top, #b41800, darken(#b41800, 5%)));
+		@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+		border-color: darken(#b41800, 10%);
+		border-bottom-color: darken(#b41800,20%);
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+		&:hover,
+		&:active {
+			@include background($color: darken(#b41800, 5%), $gradient: linear-gradient(top, darken(#b41800, 5%), darken(#b41800, 10%)));
+		}
+		&:active {
+			background: #b41800;
+			border-bottom-color: lighten(#b41800,10%);
+		}
+		&.s_disabled {
+			background: darken(#b41800, 15%);
+			color: darken($font-secondaryColor, 30%);
+			border-color: darken(#b41800,30%);
+		}
 	}
 
 // Button Base
 // -------------------------------------------------------------- //
 
 	%u-button_link {
-		@include elementGoBOOM;
+		@include reset;
 		&:hover { text-decoration: underline; }
 	}
 

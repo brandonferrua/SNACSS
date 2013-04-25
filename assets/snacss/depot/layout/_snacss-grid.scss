@@ -27,8 +27,9 @@ $calc-gutter-width-percent: ($gutter-width / $page-width) * 100%;
 
 // Child mixin to define span width
 @mixin span($n: 1) {
-    width: ($n * $calc-col-width) + (($n - 1) * $gutter-width);
-    max-width: ($n * $calc-col-width-percent) + (($n - 1) * $calc-gutter-width-percent);
+    //width: ($n * $calc-col-width) + (($n - 1) * $gutter-width);
+    //max-width: ($n * $calc-col-width-percent) + (($n - 1) * $calc-gutter-width-percent);
+    width: ($n * $calc-col-width-percent) + (($n - 1) * $calc-gutter-width-percent);
     @if $n == $columns {
         margin-left: 0;
     } @else {

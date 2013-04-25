@@ -1,7 +1,4 @@
 
-@mixin snacss-helpers {
-	
-}
 
 @function emCalc($px-size) {
     $emValue : $px-size/$font-size+em;
@@ -23,40 +20,14 @@
 // Hue Adjustment based on skin color variable
 // --------------------------------------------------------- //
 
-@mixin hueAdjust($target, $property, $value, $body-color: $body-color) {
-    @if ($body-color == dark) {
+@mixin hueAdjust($target, $property, $value, $body-color: $secondaryColor) {
+    $hslValue : ceil(lightness($body-color));
+    @if ($hslValue < 50%) {
         #{$target} : lighten($property,$value);
-    }
-    @if ($body-color == light) {
+    } @else {
         #{$target} : darken($property,$value);
     }
 }
-
-// Utility -> Helper (u-helper-z)
-//
-// ? Default helper objects & vendor prefixes
-//
-// ? Level 1.00 (02/17/12)
-//
-// ? Components:
-//     - Helpers
-//         - Clear Fix
-//         - Disabled
-//         - Element Go BOOM!!
-//         - Font
-//         - Make It POP
-//         - Sticky Footer
-//     - CSS3
-//         - Background Gradient
-//         - Border Radius
-//         - Flex Box
-//         - Box Shadow
-//         - @font face
-//         - Transition
-//     - Shapes
-//         - Arrows
-//
-// --------------------------------------------------------- //
 
 // Helpers
 // --------------------------------------------------------- //
@@ -76,7 +47,7 @@
 
 // Element Go BOOM!
 
-@mixin elementGoBOOM ($text: false, $boxModel: false, $layout: false) {
+@mixin reset ($text: false, $boxModel: false, $layout: false) {
     @if $text == true {
         color: $font-primaryColor;
         direction: ltr;
@@ -175,12 +146,15 @@
         visibility: visible;
 
         // Deal with Boom on buttons
-        &:active { 
+        &:active,
+        &:hover { 
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
             -ms-box-shadow: none;
             -o-box-shadow: none;
             box-shadow: none; 
+            background-color: none;
+            border-color: none;
         }
     }
 }

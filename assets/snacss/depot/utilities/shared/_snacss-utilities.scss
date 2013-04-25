@@ -36,9 +36,10 @@
 	}
 
 	code {
-		padding: emCalc(2px) emCalc(8px) emCalc(2px) emCalc(4px);
+		padding: emCalc(2px) emCalc(6px);
 		border: 1px solid;
 		font-weight: bold;
+		@include truncate;
 		@include borderRadius(4px);
 		@include hueAdjust(background-color, $content-bgColor, 10%);
 		@include hueAdjust(border-color, $content-bgColor, 20%);

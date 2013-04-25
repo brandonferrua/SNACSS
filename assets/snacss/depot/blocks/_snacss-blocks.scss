@@ -3,9 +3,21 @@
 // * These are component partials to assist with layout								                                                          
 // ************************************************************************************************************************
 
-// Button Base
+// b-list -- Core list styles
 // -------------------------------------------------------------- //
 
+	// b-list-a -- Vertical List
+	%b-list-a_base {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		.b-list-item {
+			display: block;
+			list-style: none;
+		}
+	}
+
+	// b-list-b -- Vertical List
 	%b-list-b_base {
 		position: relative;
 		margin: 0;
@@ -16,9 +28,34 @@
 		}
 	}
 
+// b-table -- Core table styles
+// -------------------------------------------------------------- //
+
+	%b-table_base {
+		max-width: 100%;
+		th,
+		td {
+			padding: emCalc(6px);
+			text-align: left;
+		}
+	}
+
+	%b-table-a_base {
+		width: 100%;
+		table-layout: auto;
+		td > * { margin-bottom: 0;  }
+		tr + tr {
+			td { border-top: 1px solid; @include hueAdjust(border-color, $content-bgColor, 15% ); }
+		}
+	}
+
 // Constructor
 // -------------------------------------------------------------- //
 
 	@mixin snacss-blocks {
 		.b-list-b { @extend %b-list-b_base !optional; }
+		.b-table { 
+			@extend %b-table_base !optional; 
+			&.b-table-a { @extend %b-table-a_base !optional; }
+		}
 	}

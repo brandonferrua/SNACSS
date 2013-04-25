@@ -15,7 +15,9 @@
 	input[type="url"],
 	input[type="search"],
 	input[type="tel"],
-	input[type="color"] {
+	input[type="color"],
+	fieldset input {
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 		@include borderRadius(3px);
 		border: 1px solid;
 		@include hueAdjust(border-color, $content-bgColor, 15%);
@@ -25,6 +27,7 @@
 		padding: emCalc(4px) emCalc(10px);
 		line-height: 20px;
 		height: 30px;
+		min-width: emCalc(210px);
 		font-size: emCalc(14px);
 		margin-bottom: $leading;
 		outline: none;
@@ -36,13 +39,21 @@
 			@include hueAdjust(border-color, $tertiaryColor, 10%);
 		}
 	}
+	select { 
+		min-width: 0;
+		font-size: emCalc(12px);
+		padding: 0 emCalc(10px);
+		height: 24px; 
+	}
 	textarea {
 		min-height: emCalc(100px);
+		min-width: emCalc(210px);
 		max-width: 100%;
 	}
-
+	fieldset {
+		input { margin-bottom: 0; }
+	}
 	label {
-		//> span { display: block; }
 	}
 
 	// Layout

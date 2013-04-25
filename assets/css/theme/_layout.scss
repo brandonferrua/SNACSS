@@ -132,3 +132,9 @@
 			line-height: emCalc($leading);
 		}
 	}
+
+
+// Tables
+td > tr > th,
+td > tr > td { padding-left: emCalc(40px); }
+

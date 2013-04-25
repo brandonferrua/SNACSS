@@ -1,6 +1,6 @@
 
 <h3>Buttons</h3>
-<table>
+<table class="b-table b-table-a">
     <thead>
         <tr>
             <th>Button Type</th>
@@ -12,7 +12,7 @@
         <tr>
             <td><button class="u-button">Button</button></td>
             <td><code>.u-button</code></td>
-            <td>Default Button Style</td>
+            <td>Core styles associated with type and box-model</td>
         </tr>
         <tr>
             <td><button class="u-button u-button-primary">Primary</button></td>
@@ -48,51 +48,98 @@
 </table>
 
 <h3>Form Elements</h3>
-<input type=text><br />
-<textarea></textarea><br />
-<label class="u-form u-form-elements s_horizontal">
-    <span>Text Field with Button</span>
-    <input type=text>
-    <input class="u-button u-button-primary" type=submit>
-</label><br />
-<input type=password placeholder=password><br />
-<label>
-    <input type=radio>
-    <span>Label</span>
-</label>
-<br />
-<label>
-    <input type=radio checked>
-    <span>Label</span>
-</label>
-<br />
-<label>
-    <input type=checkbox>
-    <span>Label</span>
-</label>
-<br />
-<label>
-<input type=checkbox checked>
-<span>Label</span>
-</label>
-<br />
-<select>
-  <option></option>
-</select>
-<select><br />
-  <optgroup label="Option group 1">
-    <option>Option 1</option>
-    <option>Option 2</option>
-  </optgroup>
-  <optgroup>
-    <option>Option 3</option>
-  </optgroup>
-</select><br />
-<input type=text placeholder=placeholder><br />
-<input type=search><br />
-<input type=file><br />
-<fieldset>
-  <legend>Legend</legend>
-  <label for=field>Label</label>
-  <input name=field>
-</fieldset><br />
+<table class="b-table b-table-a">
+    <thead>
+        <tr>
+            <th>Form Element</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>input[type=text]</td>
+            <td colspan="2">
+                <p>The input element with a type attribute whose value is "text" represents a one-line plain text edit control for the input element’s value.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><input type=text></dt>
+                    <dd class="col-6"><code>.input-append</code></dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td><textarea></textarea></td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The textarea tag defines a multi-line text input control. A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).</td>
+        </tr>
+        <tr>
+            <td><input type=password placeholder=password></td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The password type of the <code>input</code> element represents a one-line plain-text edit control for entering a password, which renders input text in such a way as to hide the characters (e.g., a series of asterisks).</td>
+        </tr>
+        <tr>
+            <td><input type=text placeholder=placeholder></td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</td>
+        </tr>
+        <tr>
+            <td><input type=search></td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>An input text field that is used for search queries.</td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type=radio>
+                    <span>Label</span>
+                </label>
+            </td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The radio type of the <code>input</code> element represents a radio button control.</td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type=checkbox>
+                    <span>Label</span>
+                </label>    
+            </td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The checkbox type of the <code>input</code> element represents a state or option that can be toggled.</td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <optgroup label="Option group 1">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </optgroup>
+                    <optgroup>
+                        <option>Option 3</option>
+                    </optgroup>  
+                </select>  
+            </td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>Allows authors to group choices logically in a select element.</td>
+        </tr>
+        <tr>
+            <td><input type=file></td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The file type of the <code>input</code> element represents widget for specifying a file.</td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Legend</legend>
+                    <label for=field>Label</label>
+                    <input name=field>
+                </fieldset>
+            </td>
+            <td><code class="s_browser">Browser Default</code></td>
+            <td>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</td>   
+        </tr>
+    </tbody>
+</table>

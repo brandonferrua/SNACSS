@@ -27,6 +27,7 @@
 	    font-style: normal;
 	    font-weight: 400;
 	    line-height: 25.875px;
+	    color: $font-primaryColor;
 	}
 
 	blockquote {
@@ -97,14 +98,7 @@
 		font-weight: 300;
 	}
 
-	table {
-		max-width: 100%;
-		th,
-		td {
-			padding: emCalc(4px);
-			text-align: left;
-		}
-	}
+	table { @extend %b-table_base; }
 
 	img { width: auto; max-width: 100%; height: auto; border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 }
