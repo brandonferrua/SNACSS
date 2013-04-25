@@ -39,13 +39,4 @@ Thumbs.db
 
 # Directories #
 ###############
-.sass-cache/
-includes/
-favicon.ico
-humans.txt
-index.php
-robots.txt
-elements.html
-crossdomain.xml
-404.html
-*.php
+
