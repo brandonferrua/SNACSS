@@ -1,0 +1,26 @@
+// ************************************************************************************************************************
+// * SNACSS Settings                                                                                                 	  
+// * Set Pathing and turn features sets on and off								                                                          
+// ************************************************************************************************************************
+	
+// SNACSS Paths
+// -------------------------------------------------------------- //
+
+	$snacssURL-core              : "../snacss" !default;
+
+// Image Paths
+// -------------------------------------------------------------- //
+
+    $imageURL-core              : "../snacss/images" !default;
+    $imageURL-local             : "../images" !default;
+
+// SNACSS Features
+// -------------------------------------------------------------- //
+
+	$trigger_snacss-reset 		: true !default;
+	$trigger_snacss-debug	 	: true !default;
+	$trigger_snacss-forms 		: true !default;
+	$trigger_snacss-typography  : true !default;
+	$trigger_snacss-layout 		: true !default;
+	$trigger_snacss-blocks 		: true !default;
+	$trigger_snacss-plugins 	: true !default;

@@ -1,0 +1,143 @@
+
+@mixin snacss-forms {
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"] {
+		@include borderRadius(3px);
+		border: 1px solid;
+		@include hueAdjust(border-color, $content-bgColor, 15%);
+		@include hueAdjust(border-top-color, $content-bgColor, 25%);
+		@include hueAdjust(border-left-color, $content-bgColor, 25%);
+		@include hueAdjust(background-color, $content-bgColor, 1%);
+		padding: emCalc(4px) emCalc(10px);
+		line-height: 20px;
+		height: 30px;
+		font-size: emCalc(14px);
+		margin-bottom: $leading;
+		outline: none;
+		&:hover {
+			@include hueAdjust(border-color, $content-bgColor, 25%);
+		}
+		&:active,
+		&:focus {
+			@include hueAdjust(border-color, $tertiaryColor, 10%);
+		}
+	}
+	textarea {
+		min-height: emCalc(100px);
+		max-width: 100%;
+	}
+
+	label {
+		//> span { display: block; }
+	}
+
+	// Layout
+	.u-form-elements {
+		@include group;
+		margin-bottom: emCalc($leading);
+		// States
+		&.s_horizontal {
+			> span { display: block; }
+			> * { @include inline-block; margin: 0; }
+			.u-button { height: auto; line-height: 28px; padding: 0 emCalc(10px); }
+		}
+	}
+
+	// Dropdown
+	.u-dropdown {
+		position: relative;
+		> span { min-width: emCalc(100px); max-width: 100%; }
+	    // Hide dropDown
+	    > ul { position: absolute; left: -9999px; }
+	    .b-list-item + .b-list-item { margin: 0; padding: 0; }
+	    &:hover { cursor: pointer; > span { @include borderRadius-bottom(0); } }
+	    // Show dropDown
+	    &:hover > ul { left: auto; text-indent: 0; z-index: 10; max-width: 100%; }
+	    // Show Third Tier dropdown
+	    & ul .section:hover > ul { left: 100%; top: 0; }
+
+	}
+
+	.u-dropdown-a {
+		> span {
+			@extend %u-button_secondary;
+			line-height: normal;
+			@include truncate;
+			@include triangle($direction: "down", $location: ":after", $size: 6px, $color: $font-secondaryColor, $spacing: 8px);
+			&:hover,
+			&:active {
+				background: $secondaryColor;
+			}
+		}
+		> ul {
+			@include borderRadius-bottom(4px);
+			background-color: darken($secondaryColor, 5%);
+			padding: 0;
+			font-family: sans-serif;
+			border: 1px solid;
+			border-color: darken($secondaryColor,10%);
+			border-bottom-color: darken($secondaryColor,20%);
+			margin-top: -2px;
+			a {
+				padding: emCalc(4px) emCalc(10px) emCalc(4px) emCalc(20px);
+				text-decoration: none;
+				display: block;
+				color: $font-secondaryColor;
+				&:hover {
+					background: $secondaryColor;
+				}
+			}
+		}
+		.b-list-item + .b-list-item { border-top: 1px solid; border-color: darken($secondaryColor,10%); }
+		&:active > span { background: $secondaryColor; }
+	}
+
+	// Tooltips
+	.u-tooltip {
+		position: relative;
+		text-align: center;
+		font-family: sans-serif;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.u-tooltip-a {
+		@include borderRadius(4px);
+		background-color: #ffffff;
+		border: 1px solid;
+		@include hueAdjust(border-color, $content-bgColor, 5%);
+		@include hueAdjust(border-bottom-color, $content-bgColor, 20%);
+		@include triangle($direction: "down", $location: ":after", $size: 6px, $color: $content-bgColor, $spacing: 0);
+		@include triangle($direction: "down", $location: ":before", $size: 6px, $color: $content-bgColor, $spacing: 0);
+		&:before {
+			@include hueAdjust(border-top-color, $content-bgColor, 20%);
+			position: absolute;
+			bottom: 1px;
+			left: 50%;
+			margin-left: -3px;
+			margin-bottom: -7px;
+		}
+		&:after {
+			border-top-color: #ffffff;
+			position: absolute;
+			bottom: 1px;
+			left: 50%;
+			margin-left: -3px;
+			margin-bottom: -6px;
+		}
+	}
+
+}

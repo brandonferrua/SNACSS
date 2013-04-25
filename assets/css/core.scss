@@ -1,6 +1,6 @@
 // ************************************************************************************************************************
-// * Master SNACSS File                                                                                                	  *
-// * Project Documentation: http://wwww.styleguide/link/goes/here                                                         *
+// * Master SNACSS File                                                                                                	  
+// * Project Documentation: http://wwww.styleguide/link/goes/here                                                         
 // ************************************************************************************************************************
 	
 	// Import Custom Font
@@ -10,8 +10,8 @@
 	@import "vars";
 
 	// Import SNACSS Framework
-	@import "snacss/settings";
-	@import "snacss/init";
+	@import "../snacss/settings";
+	@import "../snacss/init";
 
 	// Local Project Styles
 	@import "theme/layout";

@@ -1,0 +1,24 @@
+// ************************************************************************************************************************
+// * SNACSS Blocks Files                                                                                               	  
+// * These are component partials to assist with layout								                                                          
+// ************************************************************************************************************************
+
+// Button Base
+// -------------------------------------------------------------- //
+
+	%b-list-b_base {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		.b-list-item {
+			display: block;
+			list-style: none;
+		}
+	}
+
+// Constructor
+// -------------------------------------------------------------- //
+
+	@mixin snacss-blocks {
+		.b-list-b { @extend %b-list-b_base !optional; }
+	}

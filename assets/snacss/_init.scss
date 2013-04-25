@@ -1,0 +1,56 @@
+// ************************************************************************************************************************
+// * Master SNACSS Init File                                                                                                	  
+// * Project Documentation: http://wwww.styleguide/link/goes/here                                                         
+// ************************************************************************************************************************
+
+// SNACSS Settings
+@import "settings";
+
+// Global imports unique to Core
+@import "shared";
+
+// Scaffolding
+@import "depot/layout/snacss-layout";
+
+// Forms
+@import "depot/forms/snacss-forms";
+
+// Typography
+@import "depot/typography/snacss-typography";
+
+// Blocks | Components
+@import "depot/blocks/snacss-blocks";
+
+// Plugins | Feature Sets of Blocks
+@import "depot/plugins/snacss-plugins";
+
+// Debug
+@import "depot/debug/snacss-debug";
+
+// Init 
+
+@mixin init (
+
+	$snacss-reset 		: $trigger_snacss-reset,
+	$snacss-debug 		: $trigger_snacss-debug,
+	$snacss-forms 		: $trigger_snacss-forms,
+	$snacss-typography 	: $trigger_snacss-typography,
+	$snacss-layout 		: $trigger_snacss-layout,
+	$snacss-blocks 		: $trigger_snacss-blocks,
+	$snacss-plugins 	: $trigger_snacss-plugins
+
+) {
+
+	@if ($snacss-reset) 	 { @include snacss-reset; }
+	@if ($snacss-debug) 	 { @include snacss-debug; }
+	@if ($snacss-forms) 	 { @include snacss-forms; }
+	@if ($snacss-typography) { @include snacss-typography; }
+	@if ($snacss-layout) 	 { @include snacss-layout; }
+	@if ($snacss-blocks) 	 { @include snacss-blocks; }
+	@if ($snacss-plugins) 	 { @include snacss-plugins; }
+
+}
+
+// Make me available!
+
+@include init;

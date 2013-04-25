@@ -1,0 +1,57 @@
+
+// Code
+	.u-code {
+		@include group;
+		position: relative;
+	}
+	.u-code-a {
+		@include hueAdjust(background-color, $content-bgColor, 5%);
+		@include borderRadius(8px);
+		@include boxShadow(inset 0 0 18px rgba(0,0,0,.1));
+		padding: emCalc(60px) emCalc(20px) emCalc(20px);
+		margin-bottom: emCalc($leading);
+		&:hover {
+			.code-toggle { opacity: 1; }
+		}
+		.code-toggle {
+			position: absolute;
+			right: $leading;
+			top: $leading;
+			opacity: 0;
+			@include transition(opacity, .25s, ease);
+		}
+		&:before {
+			@include inline-block;
+			@include borderRadius-top-left(4px);
+			@include borderRadius-bottom-right(4px);
+			background-color: $tertiaryColor;
+			color: $font-tertiaryColor;
+			content: 'Code';
+			padding: emCalc(5px) emCalc(20px);
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: normal;
+		}
+	}
+
+	code {
+		padding: emCalc(2px) emCalc(8px) emCalc(2px) emCalc(4px);
+		border: 1px solid;
+		font-weight: bold;
+		@include borderRadius(4px);
+		@include hueAdjust(background-color, $content-bgColor, 10%);
+		@include hueAdjust(border-color, $content-bgColor, 20%);
+		@include hueAdjust(color, $tertiaryColor, 15%);
+	}
+
+	pre.prettyprint.prettyprinted {
+		@include group;
+		@include hueAdjust(background-color, $content-bgColor, 5%);
+		@include borderRadius(8px);
+		@include boxShadow(inset 0 0 18px rgba(0,0,0,.1));
+		position: relative;
+		padding: emCalc(8px);
+		margin-bottom: emCalc($leading);
+		border: none;
+	}

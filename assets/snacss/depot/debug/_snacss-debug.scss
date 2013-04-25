@@ -1,0 +1,18 @@
+// ************************************************************************************************************************
+// * SNACSS Debug File                                                                                               	  
+// * Tools used to debug display issues								                                                          
+// ************************************************************************************************************************
+
+// Import Hugrid
+@import "lib/debug-grid";
+
+// Turn Hugrid on
+$trigger_debug-grid : true !default;
+
+// Enabled these badboys
+@mixin snacss-debug (
+	$debug-grid 		: $trigger_debug-grid
+) { 
+	// Enabled Grid Debug
+	@if ($debug-grid) { @include debug-grid; }
+}

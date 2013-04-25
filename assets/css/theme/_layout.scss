@@ -4,14 +4,13 @@
 
 // Body
 	body {
-		padding-top: emCalc(100px);
+		padding-top: emCalc(83px);
 	}
 
 // Site Wrapper
 	.site { margin-left: $col-margin; margin-right: $col-margin; }
 	.wrapper {
 		@include group;
-		//width: 80%;
 		max-width: emCalc(1176px);
 		min-width: emCalc(620px);
 		margin: 0 auto;
@@ -28,7 +27,7 @@
 		float: none;
 		padding: emCalc(10px);
 		margin: 0;
-		background-color: rgba(255,255,255,.5);
+		background-color: $secondaryColor;
 		border-bottom: 1px solid darken($content-bgColor,10%);
 		z-index: 10;
 		.logo {
@@ -57,7 +56,7 @@
 			ul {
 				padding-left: emCalc(15px);
 				position: relative;
-				a { color: $font-color; &:hover { color: $tertiaryColor; } }
+				a { color: $font-primaryColor; &:hover { color: $tertiaryColor; } }
 				&:before {
 					content: '';
 					width: 1px;

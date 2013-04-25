@@ -1,0 +1,21 @@
+
+%template-a_base {
+	.wrapper {
+		width: emCalc(1000px);
+		max-width: emCalc(1000px);
+		min-width: emCalc(768px);
+		position: relative;
+		section[role="main"] {
+			@include col(12);
+			padding: 0;
+		}
+	}
+	.primary-content {
+		@include col(8);
+	}
+	.secondary-content {
+		@include col(4);
+	}
+}
+
+.template-a { @extend %template-a_base !optional; }

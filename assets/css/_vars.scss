@@ -17,26 +17,6 @@
 //                                         
 // --------------------------------------------------------- //
 
-    // Image Paths
-    // -------------------------------------------------------------- //
-
-    $imageURL-core                  : "../../Blocks/images" !default;
-    $imageURL-local                 : "../images" !default;
-
-    // Icon Colors
-    //
-    // Variable points to cobalt level icon sets
-    //      Can accept  :
-    //          black
-    //          darkgrey
-    //          grey
-    //          lightergrey
-    //          lightgrey
-    //          white
-    // -------------------------------------------------------------- //
-
-    $icon-color                     : "darkgrey" !default;
-
     // Body Hue Adjustments
     //
     // Variable will change lighten or darker functions based on value
@@ -50,13 +30,12 @@
 
     // Project Color Palette 
 
-    $primaryColor                   : #141414 !default;                 // Color Palette Base - Body Background
+    $primaryColor                   : #ffffff !default;                 // Color Palette Base - Body Background
     $secondaryColor                 : #f9f9f9 !default;                 // Contrasting Color to Primary  - Content Background
     $tertiaryColor                  : #00b4ff !default;                 // Accent color -- Usually a color spot, used on links and buttons
 
-    $font-color                     : #222222 !default;
-    $font-colorAlt                  : #eeeeee !default;                 // Contrasting Color to $font-color
-    $font-primaryColor              : #eeeeee !default;                 // Contrasting Color to $primaryColor
+    $font-primaryColor              : #333333 !default;                 // Contrasting Color to $primaryColor
+    $font-primaryColorAlt           : #eeeeee !default;                 // Contrasting Color to $font-primaryColor
     $font-secondaryColor            : #333333 !default;                 // Contrasting Color to $secondaryColor
     $font-tertiaryColor             : #ffffff !default;                 // Contrasting Color to $tertiaryColor
 
