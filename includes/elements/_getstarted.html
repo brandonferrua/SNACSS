@@ -1,0 +1,43 @@
+<h3>File Structure</h3>
+<h4>SNACSS Core</h4>
+<p>SNACSS is built with an Object Oriented Programatic approach in mind. The File structure consists of partials broken out into their own granular <code>@mixin</code> that can be turned on and off based on your needs and accectable file size. The <a href="">advanced docs</a> will provide more insight into those components. Place the core package within your project, in my project I placed with <code>/assets/snacss/</code>. The package is now available to your project and in the next section, I will go over the basics of initializing the package.</p>
+<pre class="prettyprint">
+<span class="pln">  snacss</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">├──</span><span class="pln"> depot</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> blocks</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> debug</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> forms</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> helpers</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> layout</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> plugins</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> reset</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> typography</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> utilities</span>
+  <span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> vendor</span>
+  <span class="pun">├──</span><span class="pln"> js</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> snacss-core</span><span class="pun">.</span><span class="pln">js
+  </span><span class="pun">├──</span><span class="pln"> font</span><span class="pun">/</span><span class="pln">
+  </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> fontawesome</span><span class="pun">.</span><span class="pln">otf
+  </span><span class="pun">└──</span><span class="pln"> images</span><span class="pun">/</span><span class="pln">
+      </span><span class="pun">├──</span><span class="pln"> snacss</span><span class="pun">-</span><span class="pln">logo</span><span class="pun">.</span><span class="pln">png</span></pre>
+
+<h4>Initialization</h4>
+<p>Now that you have SNACSS available to your project, a few includes will have you up and running in seconds. Within the folder you dropped the SNACSS core, so my example would be <code>/assets/</code>, creating your css folder. This is where all your project level styles will be held. For SNACSS to init, you only need two files but I recommend you keep the OOP approach intact by also creating a <code>/theme/</code> where you will place all your overrides or styles that may not be available within the SNACSS framework. To begin, create two files within <code>/assets/css/</code>, you will need a <code>core.scss</code> and <code>_vars.scss</code>. I'm assuming if you're looking for a SASS framework you will know how to compile a sass file but if you don't, do the following steps: </p>
+	<ol>
+		<li>open terminal</li>
+		<li>dig down to your project, for me its <code>~/username/Applications/MAMP/htdocs/SNACSS/</code></li>
+		<li>Run this cmd, <code>sass --watch assets</code></li>
+	</ol>
+<p>Your project should now be spitting out a <code>core.css</code> file now.</p>
+<p>Now lets setup your <code>core.scss</code> file to initialize SNACSS. Below is a basic example of initialization:</p>
+<pre class="prettyprint">
+// Local Project Overrides
+@import "vars";
+
+// Import SNACSS Framework
+@import "../snacss/settings";
+@import "../snacss/init";
+
+// Local Project Styles
+@import "theme/core";
+</pre>
