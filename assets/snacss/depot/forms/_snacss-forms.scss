@@ -1,60 +1,134 @@
 
+%snacss-form_box {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box !important;
+	@include borderRadius(3px);
+	border: 1px solid;
+	@include hueAdjust(border-color, $content-bgColor, 15%);
+	@include hueAdjust(border-top-color, $content-bgColor, 25%);
+	@include hueAdjust(border-left-color, $content-bgColor, 25%);
+	@include hueAdjust(background-color, $content-bgColor, 1%);
+	padding: emCalc(4px) emCalc(10px);
+	line-height: 20px;
+	height: 30px;
+	min-width: emCalc(210px);
+	font-size: emCalc(14px);
+	margin-bottom: $leading;
+	outline: none;
+	&:hover {
+		@include hueAdjust(border-color, $content-bgColor, 25%);
+	}
+	&:active,
+	&:focus {
+		@include hueAdjust(border-color, $tertiaryColor, 10%);
+	}
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+fieldset input { @extend %snacss-form_box; }
+
+%snacss-form_select {
+	padding: 0 emCalc(24px) 0 emCalc(8px);
+	-webkit-appearance: none;
+	@include background($color: $secondaryColor, $gradient: linear-gradient(top, $secondaryColor, darken($secondaryColor, 5%)));
+	@include boxShadow(inset 0 1px 0 rgba(255,255,255,.3));
+	border-color: darken($secondaryColor, 10%);
+	border-bottom-color: darken($secondaryColor,20%);
+	color: $font-secondaryColor;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
+	background-size: auto 100%;
+	height: 24px;
+	font-size: emCalc(12px);
+	position: relative;
+	min-width: 0;
+	@include triangle($direction: "up", $location: ":before", $size: 4px, $color: darken($secondaryColor, 50%));
+	@include triangle($direction: "down", $location: ":after", $size: 4px, $color: darken($secondaryColor, 50%));
+	&:before,
+	&:after {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin: 0;
+		z-index: 999;
+	}
+}
+
+select {
+	@extend %snacss-form_select;
+}
+
 @mixin snacss-forms {
-	select,
-	textarea,
-	input[type="text"],
-	input[type="password"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="date"],
-	input[type="month"],
-	input[type="time"],
-	input[type="week"],
-	input[type="number"],
-	input[type="email"],
-	input[type="url"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="color"],
-	fieldset input {
-		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-		@include borderRadius(3px);
-		border: 1px solid;
-		@include hueAdjust(border-color, $content-bgColor, 15%);
-		@include hueAdjust(border-top-color, $content-bgColor, 25%);
-		@include hueAdjust(border-left-color, $content-bgColor, 25%);
-		@include hueAdjust(background-color, $content-bgColor, 1%);
-		padding: emCalc(4px) emCalc(10px);
-		line-height: 20px;
-		height: 30px;
-		min-width: emCalc(210px);
-		font-size: emCalc(14px);
-		margin-bottom: $leading;
-		outline: none;
-		&:hover {
-			@include hueAdjust(border-color, $content-bgColor, 25%);
-		}
-		&:active,
-		&:focus {
-			@include hueAdjust(border-color, $tertiaryColor, 10%);
-		}
-	}
-	select { 
-		min-width: 0;
-		font-size: emCalc(12px);
-		padding: 0 emCalc(10px);
-		height: 24px; 
-	}
-	textarea {
-		min-height: emCalc(100px);
-		min-width: emCalc(210px);
-		max-width: 100%;
-	}
-	fieldset {
-		input { margin-bottom: 0; }
-	}
-	label {
-	}
+	// select,
+	// textarea,
+	// input[type="text"],
+	// input[type="password"],
+	// input[type="datetime"],
+	// input[type="datetime-local"],
+	// input[type="date"],
+	// input[type="month"],
+	// input[type="time"],
+	// input[type="week"],
+	// input[type="number"],
+	// input[type="email"],
+	// input[type="url"],
+	// input[type="search"],
+	// input[type="tel"],
+	// input[type="color"],
+	// fieldset input {
+	// 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	// 	@include borderRadius(3px);
+	// 	border: 1px solid;
+	// 	@include hueAdjust(border-color, $content-bgColor, 15%);
+	// 	@include hueAdjust(border-top-color, $content-bgColor, 25%);
+	// 	@include hueAdjust(border-left-color, $content-bgColor, 25%);
+	// 	@include hueAdjust(background-color, $content-bgColor, 1%);
+	// 	padding: emCalc(4px) emCalc(10px);
+	// 	line-height: 20px;
+	// 	height: 30px;
+	// 	min-width: emCalc(210px);
+	// 	font-size: emCalc(14px);
+	// 	margin-bottom: $leading;
+	// 	outline: none;
+	// 	&:hover {
+	// 		@include hueAdjust(border-color, $content-bgColor, 25%);
+	// 	}
+	// 	&:active,
+	// 	&:focus {
+	// 		@include hueAdjust(border-color, $tertiaryColor, 10%);
+	// 	}
+	// }
+	// select { 
+	// 	min-width: 0;
+	// 	font-size: emCalc(12px);
+	// 	padding: 0 emCalc(10px);
+	// 	height: 24px; 
+	// }
+	// textarea {
+	// 	min-height: emCalc(100px);
+	// 	min-width: emCalc(210px);
+	// 	max-width: 100%;
+	// }
+	// fieldset {
+	// 	input { margin-bottom: 0; }
+	// }
+	// label {
+	// }
 
 	// Layout
 	.u-form-elements {
