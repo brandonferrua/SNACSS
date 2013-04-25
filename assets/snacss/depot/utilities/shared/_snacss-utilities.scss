@@ -9,6 +9,7 @@
 		@include borderRadius(8px);
 		@include boxShadow(inset 0 0 18px rgba(0,0,0,.1));
 		padding: emCalc(60px) emCalc(20px) emCalc(20px);
+		margin-top: emCalc($leading);
 		margin-bottom: emCalc($leading);
 		&:hover {
 			.code-toggle { opacity: 1; }
@@ -32,6 +33,13 @@
 			left: 0;
 			top: 0;
 			line-height: normal;
+		}
+		pre.prettyprint.prettyprinted {
+			@include borderRadius(none);
+			@include boxShadow(none);
+			padding: 0;
+			border: none;
+			background-color: transparent;
 		}
 	}
 

@@ -48,7 +48,17 @@
 </table>
 
 <h3>Form Elements</h3>
-<table class="b-table b-table-a">
+<p>SNACSS offers an array of 'States' that can manipulate that layout of form elements. Just references the <strong>class-names</strong> column and append to the parent container of the element, for example:</p>
+<strong>Please note that <code>type</code> node is required in SNACSS.</strong>
+<div class="u-code u-code-a">
+<pre class="prettyprint">
+<span class="pln"><</span>div class="u-form u-form-a s_input-append">
+    <span class="pln"><</span>input type="text">
+    <span class="pln"><</span>input type="submit">
+<span class="pln"><</span>/div>
+</pre>
+</div>
+<table class="b-table b-table-a s_forms">
     <thead>
         <tr>
             <th>Form Element</th>
@@ -57,7 +67,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>input[type=text]</td>
+            <td><code>input[type=text]</code></td>
             <td colspan="2">
                 <p>The input element with a type attribute whose value is "text" represents a one-line plain text edit control for the input element’s value.</p>
                 <span class="col-row col-12">
@@ -66,80 +76,161 @@
                 </span>
                 <dl class="col-row col-12">
                     <dt class="col-6"><input type=text></dt>
-                    <dd class="col-6"><code>.input-append</code></dd>
+                    <dd class="col-6"><code>.foo</code></dd>
                 </dl>
             </td>
         </tr>
         <tr>
-            <td><textarea></textarea></td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The textarea tag defines a multi-line text input control. A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).</td>
-        </tr>
-        <tr>
-            <td><input type=password placeholder=password></td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The password type of the <code>input</code> element represents a one-line plain-text edit control for entering a password, which renders input text in such a way as to hide the characters (e.g., a series of asterisks).</td>
-        </tr>
-        <tr>
-            <td><input type=text placeholder=placeholder></td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</td>
-        </tr>
-        <tr>
-            <td><input type=search></td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>An input text field that is used for search queries.</td>
-        </tr>
-        <tr>
-            <td>
-                <label>
-                    <input type=radio>
-                    <span>Label</span>
-                </label>
+            <td><code>textarea</code></td>
+            <td colspan="2">
+                <p>The textarea tag defines a multi-line text input control. A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><textarea></textarea></dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
             </td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The radio type of the <code>input</code> element represents a radio button control.</td>
         </tr>
         <tr>
-            <td>
-                <label>
-                    <input type=checkbox>
-                    <span>Label</span>
-                </label>    
+            <td><code>input [type=password]</code></td>
+            <td colspan="2">
+                <p>The password type of the <code>input</code> element represents a one-line plain-text edit control for entering a password, which renders input text in such a way as to hide the characters (e.g., a series of asterisks).</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><input type=password placeholder=password></dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
             </td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The checkbox type of the <code>input</code> element represents a state or option that can be toggled.</td>
         </tr>
         <tr>
-            <td>
-                <select>
-                    <optgroup label="Option group 1">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                    </optgroup>
-                    <optgroup>
-                        <option>Option 3</option>
-                    </optgroup>  
-                </select>  
+            <td><code>input placeholder=placeholder</code></td>
+            <td colspan="2">
+                <p>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><input type=text placeholder=placeholder></dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
             </td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>Allows authors to group choices logically in a select element.</td>
         </tr>
         <tr>
-            <td><input type=file></td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The file type of the <code>input</code> element represents widget for specifying a file.</td>
-        </tr>
-        <tr>
-            <td>
-                <fieldset>
-                    <legend>Legend</legend>
-                    <label for=field>Label</label>
-                    <input name=field>
-                </fieldset>
+            <td><code>input[type=search]</code></td>
+            <td colspan="2">
+                <p>An input text field that is used for search queries.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><input type=search></dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
             </td>
-            <td><code class="s_browser">Browser Default</code></td>
-            <td>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</td>   
+        </tr>
+        <tr>
+            <td><code>input[type=radio]</code></td>
+            <td colspan="2">
+                <p>The radio type of the <code>input</code> element represents a radio button control.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6">
+                        <label>
+                            <input type=radio>
+                            <span>Label</span>
+                        </label>
+                    </dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td><code>input[type=checkbox]</code></td>
+            <td colspan="2">
+                <p>The checkbox type of the <code>input</code> element represents a state or option that can be toggled.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6">
+                        <label>
+                            <input type=checkbox>
+                            <span>Label</span>
+                        </label>
+                    </dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td><code>select > optgroup</code></td>
+            <td colspan="2">
+                <p>Allows authors to group choices logically in a select element.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6">
+                        <select>
+                            <optgroup label="Option group 1">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                            </optgroup>
+                            <optgroup>
+                                <option>Option 3</option>
+                            </optgroup>  
+                        </select>
+                    </dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td><code>input[type=file]</code></td>
+            <td colspan="2">
+                <p>The file type of the <code>input</code> element represents widget for specifying a file.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6"><input type=file></dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td><code>fieldset > legend</code></td>
+            <td colspan="2">
+                <p>The input element is a multipurpose element for representing form widgets. The type of widget depends on the type attribute of the element.</p>
+                <span class="col-row col-12">
+                    <div class="col-6">States</div>
+                    <div class="col-6">Class Names</div>
+                </span>
+                <dl class="col-row col-12">
+                    <dt class="col-6">
+                        <fieldset>
+                            <legend>Legend</legend>
+                            <label for=field>Label</label>
+                            <input name=field>
+                        </fieldset>
+                    </dt>
+                    <dd class="col-6"><code>.foo</code></dd>
+                </dl>
+            </td>  
         </tr>
     </tbody>
 </table>

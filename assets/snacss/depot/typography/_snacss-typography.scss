@@ -100,6 +100,8 @@
 
 	table { @extend %b-table_base; }
 
+	small { font-size: emCalc(11px); }
+
 	img { width: auto; max-width: 100%; height: auto; border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 }
 

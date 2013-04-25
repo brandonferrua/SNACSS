@@ -133,6 +133,16 @@
 		}
 	}
 
+// Layout Demo
+	.two-column-demo {
+		.primary-content,
+		.secondary-content { 
+			@include borderRadius(3px);
+			line-height: emCalc(500px); 
+			background-color: darken($content-bgColor, 15%); 
+			text-align: center;
+		}
+	}
 
 // Tables
 td > tr > th,
